@@ -1,4 +1,4 @@
-package com.hafid.spring.projects.configurations.XML;
+package com.hafid.spring.projects.classes.element;
 
 public interface TypeElement {
 	public String getTypeElement();

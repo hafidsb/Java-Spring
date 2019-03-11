@@ -13,11 +13,11 @@
    
     <!-- bean definitions go here -->
     <bean id="myElement1"
-    	class="com.hafid.spring.projects.configurations.XML.Water">    
+    	class="com.hafid.spring.projects.classes.element.Water">    
     </bean>
     
     <bean id="myPoke_1"
-    	class="com.hafid.spring.projects.configurations.XML.Squirtle">
+    	class="com.hafid.spring.projects.classes.pokemon.Squirtle">
     	<!-- Dependency injection -->
     	<!-- <constructor-arg ref="myElement1"></constructor-arg> -->
     	
@@ -33,7 +33,7 @@
     	
     </bean>
     <bean id="myPoke_2"
-    	class="com.hafid.spring.projects.configurations.XML.Squirtle">        	
+    	class="com.hafid.spring.projects.classes.pokemon.Squirtle">        	
     	
     	<!-- Dependency injection -->
     	<constructor-arg index="0" ref="myElement1"></constructor-arg>

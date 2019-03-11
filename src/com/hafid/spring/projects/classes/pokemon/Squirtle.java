@@ -1,4 +1,6 @@
-package com.hafid.spring.projects.configurations.XML;
+package com.hafid.spring.projects.classes.pokemon;
+
+import com.hafid.spring.projects.classes.element.TypeElement;
 
 public class Squirtle implements Pokemon {
 	private TypeElement element;
@@ -52,7 +54,7 @@ public class Squirtle implements Pokemon {
 
 	@Override
 	public String yellName() {		
-		return "Yaaas!";
+		return "Squirtle";
 	}
 
 }

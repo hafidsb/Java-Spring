@@ -2,6 +2,9 @@ package com.hafid.spring.projects.configurations.XML;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+import com.hafid.spring.projects.classes.pokemon.Pokemon;
+import com.hafid.spring.projects.classes.pokemon.Squirtle;
+
 public class PokemonXMLApp {
 
 	public static void main(String[] args) {
