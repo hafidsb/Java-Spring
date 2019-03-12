@@ -34,6 +34,7 @@ public class PokemonXMLApp {
 		charmander2.setElement(water);
 		System.out.println("Pokemon 3: " + charmander2.yellName() + "\nElement: " + charmander2.getElement().getTypeElement());
 		System.out.println("Pokemon 2: " + charmander1.yellName() + "\nElement: " + charmander1.getElement().getTypeElement());
+		
 		// Close IOC container
 		context.close();
 	}
