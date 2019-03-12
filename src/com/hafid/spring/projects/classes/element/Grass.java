@@ -2,7 +2,7 @@ package com.hafid.spring.projects.classes.element;
 
 import org.springframework.stereotype.Component;
 
-@Component("grassElement")
+@Component()
 public class Grass implements TypeElement {
 
 	@Override

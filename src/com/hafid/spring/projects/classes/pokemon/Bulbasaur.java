@@ -20,8 +20,10 @@ public class Bulbasaur implements Pokemon {
 	}
 	
 	@Autowired
-	public Bulbasaur(@Qualifier("grassElement")TypeElement element, @Value("${poke1.atk}")int atk, 
-						@Value("${poke1.def}")int def, @Value("${poke1.hp}")int hp) {
+	public Bulbasaur(@Qualifier("grass")TypeElement element, 
+					 @Value("${poke1.atk}")int atk, 
+					 @Value("${poke1.def}")int def, 
+					 @Value("${poke1.hp}")int hp) {
 		super();
 		this.element = element;
 		this.atk = atk;
