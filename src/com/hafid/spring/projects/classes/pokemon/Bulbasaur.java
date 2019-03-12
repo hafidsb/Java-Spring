@@ -1,26 +1,40 @@
 package com.hafid.spring.projects.classes.pokemon;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 import com.hafid.spring.projects.classes.element.TypeElement;
 
 @Component
-public class Charmander implements Pokemon {
-	private TypeElement element;
+public class Bulbasaur implements Pokemon {
+	
+	private TypeElement element;	
 	private int atk;
 	private int def;
 	private int hp;
 	
-	public Charmander() {
+	public Bulbasaur() {
 		super();
 	}
-
-	public Charmander(TypeElement element, int atk, int def, int hp) {
+	
+	@Autowired
+	public Bulbasaur(@Qualifier("grassElement")TypeElement element, @Value("${poke1.atk}")int atk, 
+						@Value("${poke1.def}")int def, @Value("${poke1.hp}")int hp) {
 		super();
 		this.element = element;
 		this.atk = atk;
 		this.def = def;
 		this.hp = hp;
+	}
+
+	public TypeElement getElement() {
+		return element;
+	}
+
+	public void setElement(TypeElement element) {
+		this.element = element;
 	}
 
 	public int getAtk() {
@@ -47,17 +61,9 @@ public class Charmander implements Pokemon {
 		this.hp = hp;
 	}
 
-	public TypeElement getElement() {
-		return element;
-	}
-
-	public void setElement(TypeElement element) {
-		this.element = element;
-	}
-
 	@Override
 	public String yellName() {
-		return "Charmander";
+		return "Bulbasaur";
 	}
 
 }

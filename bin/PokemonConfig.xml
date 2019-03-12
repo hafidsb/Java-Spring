@@ -15,28 +15,27 @@
     <bean id="myElement1"
     	class="com.hafid.spring.projects.classes.element.Water">    
     </bean>
+    <bean id="myElement2"
+    	class="com.hafid.spring.projects.classes.element.Fire">    
+    </bean>
     
     <bean id="myPoke_1"
-    	class="com.hafid.spring.projects.classes.pokemon.Squirtle">
-    	<!-- Dependency injection -->
-    	<!-- <constructor-arg ref="myElement1"></constructor-arg> -->
-    	
-    	
-    	<!-- Properties file injection -->
+    	class="com.hafid.spring.projects.classes.pokemon.Squirtle" scope="prototype">
+  		
+  		<!-- Properties file injection -->
     	<property name="atk" value="${test.atk}"></property>
     	<property name="def" value="${test.def}"></property>
     	<property name="hp" value="${test.hp}"></property>
-    	
-    	
+    	    	
     	<!-- Setter injection --> 
     	<property name="element" ref="myElement1"></property>
     	
     </bean>
     <bean id="myPoke_2"
-    	class="com.hafid.spring.projects.classes.pokemon.Squirtle">        	
+    	class="com.hafid.spring.projects.classes.pokemon.Charmander" scope="prototype">        	
     	
     	<!-- Dependency injection -->
-    	<constructor-arg index="0" ref="myElement1"></constructor-arg>
+    	<constructor-arg index="0" ref="myElement2"></constructor-arg>
     	<constructor-arg index="1" value="${test.atk}"></constructor-arg>
     	<constructor-arg index="2" value="${test.def}"></constructor-arg>
     	<constructor-arg index="3" value="${test.hp}"></constructor-arg>
