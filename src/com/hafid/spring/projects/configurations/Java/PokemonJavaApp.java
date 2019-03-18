@@ -19,6 +19,7 @@ public class PokemonJavaApp {
 		
 		// Use bean object
 		System.out.println("Pokemon 1: " + pikachu.yellName() + "\nElement: " + pikachu.getElement().getTypeElement());
+		System.out.println("Hp: " + pikachu.getHp() + "\nAtk: " + pikachu.getAtk() + "\nDef: " + pikachu.getDef());
 		
 		// Close IOC container
 		context.close();
